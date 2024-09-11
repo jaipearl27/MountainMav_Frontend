@@ -14,17 +14,17 @@ const Hero2 = ({ head1 }) => {
         <Header />
         <div className="px-20 ">
           <img src={Birds} className="absolute top-32 left-96" />
-          <h1 className="text-7xl font-black absolute top-[40%] left-[40%]">
+          <h1 className="text-7xl font-black absolute top-[40%] left-[50%] -translate-x-1/2 text-green-700">
             {" "}
             {head1}
           </h1>
 
-          <h1 className="font-medium text-xl absolute top-[70%] left-[50%] ">
+          <h1 className="font-medium text-xl absolute top-[70%] left-[50%] -translate-x-1/2 text-green-700">
             {" "}
             Scroll Below{" "}
           </h1>
 
-          <div className="w-28 h-2 bg-black mt-2 absolute top-[75%] left-[50%]"></div>
+          <div className="w-28 h-2 bg-green-700 mt-2 absolute top-[75%] left-[50%] -translate-x-1/2 text-green-700"></div>
         </div>
       </div>
     </div>
