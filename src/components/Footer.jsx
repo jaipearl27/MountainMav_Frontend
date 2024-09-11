@@ -3,7 +3,7 @@ import Logo from "../../public/footer_logo.png";
 
 const Footer = () => {
   return (
-    <div className="h-max bg-black">
+    <div className="h-full bg-black">
       <img src={FooterLogo} className=" bg-black" />
 
       <div className=" bg-[#530030] px-24 py-8 items-center justify-center">

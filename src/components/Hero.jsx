@@ -1,9 +1,8 @@
-import React from "react";
 import Header from "./Header";
 import Circle from "../../public/circle.png";
 import Birds from "../../public/birds.png";
-import Mouhtains from "../../public/mountains.png";
-const Hero = () => {
+
+const Hero = ({ head1, head2, head3, img1 }) => {
   return (
     <div className="">
       <div
@@ -16,22 +15,21 @@ const Hero = () => {
           <img src={Birds} className="absolute top-32 left-96" />
           <h1 className="text-4xl font-black absolute top-48 left-30">
             {" "}
-            EXPLORE
+            {head1}
           </h1>
           <h1 className="text-4xl font-black absolute top-60 left-30">
-            THE MOUNTAIN
+            {head2}
           </h1>
 
           <h1 className="font-normal text-[29px] text-gray-600 absolute top-72 left-30">
-            {" "}
-            Live your dream and explore{" "}
+            {head3}
           </h1>
 
           <h1 className="font-medium text-xl"> Explore Now </h1>
 
           <div className="w-28 h-2 bg-black mt-2"></div>
           <img
-            src={Mouhtains}
+            src={img1}
             className="absolute bottom-0 w-screen left-0 right-0 h-[80%]"
           />
         </div>

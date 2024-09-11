@@ -2,6 +2,7 @@ import React from "react";
 import Trek from "../../public/trek.png";
 import Religious from "../../public/religious.png";
 import ServiceFooter from "../../public/servicefooter.png";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -21,17 +22,21 @@ const Services = () => {
           <div className="flex flex-col gap-12 items-center justify-center">
             <img
               src={Religious}
-              className="rounded-full border-2 border-dashed p-3 hover:scale-125"
+              className="rounded-full border-2 border-dashed p-3 hover:scale-125 transition-all duration-300"
             />
-            <h1 className="text-[#FFD2BF]">Religious Trips</h1>
+            <Link to={"/religious-tours"}>
+              <h1 className="text-[#FFD2BF]">Religious Trips</h1>
+            </Link>
           </div>
 
           <div className="flex flex-col items-center gap-12 justify-center">
             <img
               src={Trek}
-              className="rounded-full border-2 border-dashed p-3 hover:scale-125"
+              className="rounded-full border-2 border-dashed p-3 hover:scale-125  transition-all duration-300"
             />
-            <h1 className="text-[#FFD2BF]">Trek</h1>
+            <Link to={"/treks"}>
+              <h1 className="text-[#FFD2BF]">Treks</h1>
+            </Link>
           </div>
         </div>
 
