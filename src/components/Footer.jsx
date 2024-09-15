@@ -1,3 +1,5 @@
+"use client"
+
 import FooterLogo from "../../public/footer.png";
 import Logo from "../../public/footer_logo.png";
 

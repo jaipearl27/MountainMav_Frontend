@@ -1,6 +1,10 @@
+"use client"
+
 import React, { useState } from "react";
 import Logo from "../../public/logo.png";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
+
 
 export default function Header() {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
@@ -12,17 +16,17 @@ export default function Header() {
           <nav
             aria-label="main navigation"
             className="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700 pt-8"
-            role="navigation"
+            role="navigation" 
           >
-            <a
+            <Link
               id="Logo"
               aria-label="logo"
               aria-current="page"
-              className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
-              href="javascript:void(0)"
+              className="flex items-center gap-2 whitesspace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
+              href={"/"}
             >
-              <img src={Logo} className="" />
-            </a>
+              <Image src={Logo} className="" width={120} height={90} />
+            </Link>
             {/*      <!-- Mobile trigger --> */}
             <button
               className={`relative order-10 block h-10 w-10 self-center lg:hidden
@@ -62,48 +66,48 @@ export default function Header() {
               }`}
             >
               <li role="none" className="flex">
-                <a
+                <Link
                   role="menuitem"
                   aria-haspopup="false"
                   className="flex items-center  py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
+                  href={"/"}
                 >
-                  <span>Home</span>
-                </a>
+                  Home
+                </Link>
               </li>
               <li role="none" className="flex">
-                <a
+                <Link
                   role="menuitem"
                   aria-current="page"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
-                  href="javascript:void(0)"
+                  className="flex items-center  py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  href={"/"}
                 >
-                  <span>About</span>
-                </a>
+                  About
+                </Link>
               </li>
               <li role="none" className="flex">
-                <a
+                <Link
                   role="menuitem"
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
+                  href={"/"}
                 >
-                  <span>Gallery</span>
-                </a>
+                  Gallery
+                </Link>
               </li>
 
               <li role="none" className="flex">
-                <a
+                <div
                   role="menuitem"
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
-                  href="javascript:void(0)"
+                  
                 >
                   <div className="group relative cursor-pointer py-2">
                     <div className="flex items-center justify-between">
                       <Link
-                        to={"/religious"}
+                        href={"/religious"}
                         className="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-2 hover:text-emerald-500"
                         onClick=""
                       >
@@ -128,37 +132,25 @@ export default function Header() {
                     </div>
 
                     <div className="invisible absolute z-50 flex w-full flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
-                      <a className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                      <Link href={"/"} className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
                         Yamunotri
-                      </a>
-
-                      <a className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
-                        Gangotri
-                      </a>
-
-                      <a className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
-                        Badrinath
-                      </a>
-
-                      <a className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
-                        Kedarnath
-                      </a>
+                      </Link>
                     </div>
                   </div>
-                </a>
+                </div>
               </li>
 
               <li role="none" className="flex">
-                <a
+                <div
                   role="menuitem"
                   aria-haspopup="false"
                   className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-0"
-                  href="javascript:void(0)"
+                  href={"/"}
                 >
                   <div className="group relative cursor-pointer py-2">
                     <div className="flex items-center justify-between">
                       <Link
-                        to={"/treks"}
+                        href={"/treks"}
                         className="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-4 hover:text-emerald-500"
                         onClick=""
                       >
@@ -183,29 +175,19 @@ export default function Header() {
                     </div>
 
                     <div className="invisible absolute z-50 flex w-max flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
-                      <a className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                      <Link href={"/"} className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
                         Hampta Pass Trek
-                      </a>
+                      </Link>
 
-                      <a className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
-                        Valley of Flowers
-                      </a>
-
-                      <a className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
-                        Kedarkantha Peak Trek
-                      </a>
-
-                      <a className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
-                        Tarsar Mansar Trek
-                      </a>
+                    
                     </div>
                   </div>
-                </a>
+                </div>
               </li>
             </ul>
             <div className=" flex items-center lg:ml-0 lg:px-12">
               <button className="h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-emerald-500 px-5 text-sm font-medium tracking-wide text-white shadow-md shadow-emerald-200 transition duration-300 hover:bg-emerald-600 hover:shadow-sm hover:shadow-emerald-200 focus:bg-emerald-700 focus:shadow-sm focus:shadow-emerald-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none">
-                <Link to={"/important-docs"}>
+                <Link href={"/important-docs"}>
                   <span>Important Documents</span>
                 </Link>
               </button>

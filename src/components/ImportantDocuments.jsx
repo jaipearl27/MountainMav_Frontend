@@ -1,3 +1,6 @@
+"use client"
+
+
 const documents = [
   {
     id: 1,

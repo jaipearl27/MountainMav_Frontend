@@ -1,4 +1,4 @@
-import { Slide, Fade } from "react-awesome-reveal";
+"use client"
 
 const CardsData = [
   {

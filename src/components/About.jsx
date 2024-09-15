@@ -1,3 +1,5 @@
+"use client"
+
 import Birds from "../../public/birds.png";
 import ServiceBottom from "../../public/serviceleft.png";
 import ServiceRight from "../../public/serviceright.png";

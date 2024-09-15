@@ -1,8 +1,10 @@
-import React from "react";
+"use client"
+
 import Trek from "../../public/trek.png";
 import Religious from "../../public/religious.png";
 import ServiceFooter from "../../public/servicefooter.png";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
 
 const Services = () => {
   return (
@@ -24,7 +26,7 @@ const Services = () => {
               src={Religious}
               className="rounded-full border-2 border-dashed p-3 hover:scale-125 transition-all duration-300"
             />
-            <Link to={"/religious-tours"}>
+            <Link href={"/religious-tours"}>
               <h1 className="text-[#FFD2BF]">Religious Trips</h1>
             </Link>
           </div>
@@ -34,7 +36,7 @@ const Services = () => {
               src={Trek}
               className="rounded-full border-2 border-dashed p-3 hover:scale-125  transition-all duration-300"
             />
-            <Link to={"/treks"}>
+            <Link href={"/treks"}>
               <h1 className="text-[#FFD2BF]">Treks</h1>
             </Link>
           </div>
