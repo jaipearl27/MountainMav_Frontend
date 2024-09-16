@@ -1,7 +1,7 @@
-const page = () => {
-  return (
-    <div>page</div>
+import AboutUs from "./AboutUs";
+
+export default function page() {
+
+  return (<AboutUs/>
   )
 }
-
-export default page
