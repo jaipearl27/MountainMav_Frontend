@@ -39,7 +39,7 @@ const AboutUs = () => {
           <div className="space-y-4">
             <h3 className="text-3xl font-semibold text-white">Our Mission</h3>
             <p className="text-white leading-loose">
-              At Mountain Mavericks Trekking Soul our mission is to inspire and empower individuals to embrace the spirit of adventure, explore the wonders of the great outdoors, and foster a deeper appreciation for the environment. We aim to be your go-to resource for all things trekking, from planning your first trek to discovering hidden gems off the beaten path.Whether you're a seasoned trekker or a novice explorer, join us in celebrating the thrill of the trek and the beauty of nature. Let Mountain Mavericks Trekking Soul be your companion on your next great adventure.Thank you for being part of our trekking community!
+              At Mountain Mavericks Trekking Soul our mission is to inspire and empower individuals to embrace the spirit of adventure, explore the wonders of the great outdoors, and foster a deeper appreciation for the environment. We aim to be your go-to resource for all things trekking, from planning your first trek to discovering hidden gems off the beaten path.Whether you&aposre a seasoned trekker or a novice explorer, join us in celebrating the thrill of the trek and the beauty of nature. Let Mountain Mavericks Trekking Soul be your companion on your next great adventure.Thank you for being part of our trekking community!
             </p>
           </div>
           <div>
@@ -59,7 +59,7 @@ const AboutUs = () => {
           <h3 className="text-3xl font-semibold text-white mb-4">Join Us</h3>
           <p className="text-white leading-loose mb-6">
             Become a part of our trekking community and embark on your next
-            adventure with Trek Explorer. Whether you're a seasoned trekker or
+            adventure with Trek Explorer. Whether you&aposre a seasoned trekker or
             a beginner, we have something for everyone.
           </p>
   
