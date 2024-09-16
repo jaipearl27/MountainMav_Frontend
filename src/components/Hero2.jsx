@@ -2,29 +2,17 @@
 
 import Header from "./Header";
 
-const Hero2 = ({ head1, img = undefined }) => {
+
+
+const Hero2 = ({ img = undefined }) => {
   return (
     <div className="">
       <div
-        className="h-screen bg-cover bg-no-repeat"
+        className="h-[40vh] bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `${img ? img : "url('RELIG.jpg')"}`
+          backgroundImage: `${img ? img : `url('/RELIG.jpg')`}`
         }}
       >
-        <Header />
-        <div className="px-20 ">
-          <h1 className="text-7xl font-black absolute top-[40%] left-[50%] -translate-x-1/2 text-gray-800 drop-shadow-[0_1.2px_1.2px_#00ff0050]">
-            {" "}
-            {head1}
-          </h1>
-
-          <h2 className="font-medium text-xl absolute top-[70%] left-[50%] -translate-x-1/2 text-white">
-            {" "}
-            Scroll Down{" "}
-          </h2>
-
-          <div className="w-32 h-2 bg-green-700 mt-2 absolute top-[75%] left-[50%] -translate-x-1/2 text-green-700"></div>
-        </div>
       </div>
     </div>
   );

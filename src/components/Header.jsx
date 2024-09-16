@@ -7,7 +7,7 @@ import Image from "next/image";
 import axios from "axios";
 
 
-export default function Header() {
+export default function Header({color='[#f1f1f1]'}) {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
 
   const [titlesData, setTitlesData] = useState(null)
@@ -21,11 +21,11 @@ export default function Header() {
 
   return (
     <>
-      <header className="relative z-20 w-full bg-transparent  after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200  lg:after:hidden">
-        <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+      <header className="fixed left-1/2 -translate-x-1/2 top-2 z-20 w-full md:w-[80vw]  glass">
+        <div className="mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
           <nav
             aria-label="main navigation"
-            className="flex h-[5.5rem] items-stretch justify-between font-medium text-black pt-8"
+            className={`flex h-[5.5rem] items-stretch justify-between font-medium text-${color}`}
             role="navigation" 
           >
             <Link
@@ -91,7 +91,7 @@ export default function Header() {
                   aria-current="page"
                   aria-haspopup="false"
                   className="flex items-center  py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href={"/"}
+                  href={"/about"}
                 >
                   About
                 </Link>
@@ -118,7 +118,7 @@ export default function Header() {
                     <div className="flex items-center justify-between">
                       <Link
                         href={"/tours"}
-                        className="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-2 hover:text-emerald-500"
+                        className={`menu-hover my-2 py-2 text-base font-medium text-${color} lg:mx-2 hover:text-emerald-500`}
                         onClick=""
                       >
                         Religious Tours
@@ -163,7 +163,8 @@ export default function Header() {
                     <div className="flex items-center justify-between">
                       <Link
                         href={"/treks"}
-                        className="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-4 hover:text-emerald-500"
+                        className={`menu-hover my-2 py-2 text-base font-medium text-${color} lg:mx-2 hover:text-emerald-500`}
+                        
                         onClick=""
                       >
                         Treks
@@ -200,7 +201,7 @@ export default function Header() {
               </li>
             </ul>
             <div className=" flex items-center lg:ml-0 lg:px-12">
-              <button className="h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-emerald-500 px-5 text-sm font-medium tracking-wide text-white shadow-md shadow-emerald-200 transition duration-300 hover:bg-emerald-600 hover:shadow-sm hover:shadow-emerald-200 focus:bg-emerald-700 focus:shadow-sm focus:shadow-emerald-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none">
+              <button className="h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-emerald-500 px-5 text-sm font-medium tracking-wide text-white hover:bg-emerald-600 transition duration-300">
                 <Link href={"/important-docs"}>
                   <span>Important Documents</span>
                 </Link>

@@ -6,7 +6,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function Tours() {
-  console.log(process.env.NEXT_PUBLIC_API_URL)
+
   const [data, setData] = useState(null)
 
   useEffect(() => {
@@ -17,8 +17,11 @@ export default function Tours() {
 
 
   return (
-    <div className="mt-0 bg-black">
-        <Hero2 head1={"Tours"} />
+    <div className="bg-black">
+        <Hero2/>
+        <h1 className="text-5xl text-center py-10 font-semibold text-white">
+            Tours
+        </h1>
         <CardsListing data={data} type={"tours"}/>
       {/* <Guides> */}
     </div>
