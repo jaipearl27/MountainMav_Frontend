@@ -12,6 +12,7 @@ const CardsListing = ({ data }) => {
         {data?.length > 0 && data.map((item) => {
           return (
             <Link
+            key={`${item?._id}`}
               href={`/treks/${item?._id}`}
               className="rounded-lg overflow-hidden shadow-lg border-2 border-dashed p-2 transition duration-300"
             >
