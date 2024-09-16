@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const CardsListing = ({ data }) => {
+const CardsListing = ({ data, type="treks" }) => {
 
 
   return (
@@ -13,11 +13,11 @@ const CardsListing = ({ data }) => {
           return (
             <Link
             key={`${item?._id}`}
-              href={`/treks/${item?._id}`}
+              href={`/${type}/${item?._id}`}
               className="rounded-lg overflow-hidden shadow-lg border-2 border-dashed p-2 transition duration-300"
             >
               <Image
-                alt={`${item?.title}`}
+                alt={item?.title}
                 className="w-full h-56 object-cover"
                 src={item?.banner[0]?.url}
                 style={{

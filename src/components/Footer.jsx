@@ -7,11 +7,11 @@ import Logo from "../../public/footer_logo.png";
 const Footer = () => {
   return (
     <div className="h-full bg-black">
-      <Image  src={FooterLogo} className="w-full bg-black" width={"auto"} height={"auto"}/>
+      <Image alt=""  src={FooterLogo} className="w-full bg-black" width={"auto"} height={"auto"}/>
 
       <div className=" bg-[#530030] px-24 py-8 items-center justify-center" >
         <div className="flex flex-row justify-between items-center">
-          <Image  src={Logo} className="w-[200px] h-32" width={"auto"} height={"auto"}/>
+          <Image alt=""  src={Logo} className="w-[200px] h-32" width={"auto"} height={"auto"}/>
 
           <div className="flex flex-row gap-6">
             <h1 className="text-white"> Home </h1>

@@ -1,13 +1,23 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../public/logo.png";
 import Link from "next/link";
 import Image from "next/image";
+import axios from "axios";
 
 
 export default function Header() {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
+
+  const [titlesData, setTitlesData] = useState(null)
+
+
+  useEffect(() => {
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/titles`).then(res => {
+      setTitlesData(res.data)
+    }).catch(err => console.log(err))
+  }, [])
 
   return (
     <>
@@ -15,7 +25,7 @@ export default function Header() {
         <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
           <nav
             aria-label="main navigation"
-            className="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700 pt-8"
+            className="flex h-[5.5rem] items-stretch justify-between font-medium text-black pt-8"
             role="navigation" 
           >
             <Link
@@ -25,7 +35,7 @@ export default function Header() {
               className="flex items-center gap-2 whitesspace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
               href={"/"}
             >
-              <Image src={Logo} className="" width={120} height={90} />
+              <Image alt="" src={Logo} className="" width={120} height={90} />
             </Link>
             {/*      <!-- Mobile trigger --> */}
             <button
@@ -69,7 +79,7 @@ export default function Header() {
                 <Link
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center  py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href={"/"}
                 >
                   Home
@@ -107,11 +117,11 @@ export default function Header() {
                   <div className="group relative cursor-pointer py-2">
                     <div className="flex items-center justify-between">
                       <Link
-                        href={"/religious"}
+                        href={"/tours"}
                         className="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-2 hover:text-emerald-500"
                         onClick=""
                       >
-                        Religious Trips
+                        Religious Tours
                       </Link>
                       <span>
                         <svg
@@ -131,10 +141,12 @@ export default function Header() {
                       </span>
                     </div>
 
-                    <div className="invisible absolute z-50 flex w-full flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
-                      <Link href={"/"} className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
-                        Yamunotri
+                    <div className="invisible absolute z-50 flex w-full flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible max-h-[400px] overflow-y-auto">
+                      {titlesData?.tours && titlesData?.tours.map((item) => (
+                        <Link key={item?._id} href={`/tours/${item?._id}`} className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                        {item?.title}
                       </Link>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -174,10 +186,12 @@ export default function Header() {
                       </span>
                     </div>
 
-                    <div className="invisible absolute z-50 flex w-max flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
-                      <Link href={"/"} className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
-                        Hampta Pass Trek
+                    <div className="invisible absolute z-50 flex w-max flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible max-h-[400px] overflow-y-auto">
+                    {titlesData?.treks && titlesData?.treks.map((item) => (
+                        <Link key={item?._id} href={`/treks/${item?._id}`} className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                        {item?.title}
                       </Link>
+                      ))}
 
                     
                     </div>

@@ -24,7 +24,7 @@ const Services = () => {
         <div className="flex flex-row gap-12 items-center justify-center mt-6">
           <Link href={"/tours"} className="flex flex-col gap-12 items-center justify-center">
           
-            <Image
+            <Image alt=""
               src={Religious}
               className="rounded-full border-2 border-dashed p-3 hover:scale-110 transition-all duration-300"
               width={"auto"}
@@ -37,7 +37,7 @@ const Services = () => {
 
           <Link href={"/treks"} className="flex flex-col gap-12 items-center justify-center">
           
-          <Image
+          <Image alt=""
             src={Trek}
             className="rounded-full border-2 border-dashed p-3 hover:scale-110 transition-all duration-300"
             width={"auto"}
@@ -49,7 +49,7 @@ const Services = () => {
         </Link>
         </div>
 
-        <Image src={ServiceFooter} className="mt-24 w-full" width={"auto"}
+        <Image alt="" src={ServiceFooter} className="mt-24 w-full" width={"auto"}
           height={"auto"} />
       </div>
     </div>
