@@ -19,10 +19,10 @@ const Hero2 = ({ head1 }) => {
             {head1}
           </h1>
 
-          <h1 className="font-medium text-xl absolute top-[70%] left-[50%] -translate-x-1/2 text-gray-800 drop-shadow-[0_1.2px_1.2px_#00ff0050]">
+          <h2 className="font-medium text-xl absolute top-[70%] left-[50%] -translate-x-1/2 text-gray-800 drop-shadow-[0_1.2px_1.2px_#00ff0050]">
             {" "}
             Scroll To see our Treks{" "}
-          </h1>
+          </h2>
 
           <div className="w-32 h-2 bg-green-700 mt-2 absolute top-[75%] left-[50%] -translate-x-1/2 text-green-700"></div>
         </div>

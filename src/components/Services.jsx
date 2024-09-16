@@ -1,9 +1,10 @@
 "use client"
 
-import Trek from "../../public/trek.png";
-import Religious from "../../public/religious.png";
-import ServiceFooter from "../../public/servicefooter.png";
+import Trek from '../../public/trek.png'
+import Religious from "../../public/religious.png"
+import ServiceFooter from "../../public/servicefooter.png"
 import Link from "next/link";
+import Image from "next/image";
 
 
 const Services = () => {
@@ -21,30 +22,38 @@ const Services = () => {
         </p>
 
         <div className="flex flex-row gap-12 items-center justify-center mt-6">
-          <div className="flex flex-col gap-12 items-center justify-center">
-            <img
+          <Link href={"/tours"} className="flex flex-col gap-12 items-center justify-center">
+          
+            <Image
               src={Religious}
-              className="rounded-full border-2 border-dashed p-3 hover:scale-125 transition-all duration-300"
+              className="rounded-full border-2 border-dashed p-3 hover:scale-110 transition-all duration-300"
+              width={"auto"}
+              height={"auto"}
             />
-            <Link href={"/religious-tours"}>
-              <h1 className="text-[#FFD2BF]">Religious Trips</h1>
-            </Link>
-          </div>
+        
+              <h1 className="text-[#FFD2BF]">Religious Tours</h1>
+            
+          </Link>
 
-          <div className="flex flex-col items-center gap-12 justify-center">
-            <img
-              src={Trek}
-              className="rounded-full border-2 border-dashed p-3 hover:scale-125  transition-all duration-300"
-            />
-            <Link href={"/treks"}>
-              <h1 className="text-[#FFD2BF]">Treks</h1>
-            </Link>
-          </div>
+          <Link href={"/treks"} className="flex flex-col gap-12 items-center justify-center">
+          
+          <Image
+            src={Trek}
+            className="rounded-full border-2 border-dashed p-3 hover:scale-110 transition-all duration-300"
+            width={"auto"}
+            height={"auto"}
+          />
+      
+            <h1 className="text-[#FFD2BF]">Treks</h1>
+          
+        </Link>
         </div>
 
-        <img src={ServiceFooter} className="mt-24" />
+        <Image src={ServiceFooter} className="mt-24 w-full" width={"auto"}
+          height={"auto"} />
       </div>
     </div>
+
   );
 };
 

@@ -20,13 +20,13 @@ const Hero = ({ head1, head2, head3, img1 }) => {
             {" "}
             {head1}
           </h1>
-          <h1 className="text-4xl font-black absolute top-60 left-30">
+          <h2 className="text-4xl font-black absolute top-60 left-30">
             {head2}
-          </h1>
+          </h2>
 
-          <h1 className="font-normal text-[29px] text-gray-600 absolute top-72 left-30">
+          <h2 className="font-normal text-[29px] text-gray-600 absolute top-72 left-30">
             {head3}
-          </h1>
+          </h2>
 
           <h1 className="font-medium text-xl"> Explore Now </h1>
 
