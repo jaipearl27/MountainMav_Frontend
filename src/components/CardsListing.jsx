@@ -19,7 +19,7 @@ const CardsListing = ({ data, type="treks" }) => {
               <Image
                 alt={item?.title}
                 className="w-full h-56 object-cover"
-                src={item?.banner[0]?.url}
+                src={`${item?.banner[0]?.url}`}
                 style={{
                   aspectRatio: "1920/1080",
                   objectFit: "cover",
