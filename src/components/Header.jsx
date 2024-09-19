@@ -141,7 +141,7 @@ export default function Header({color='[#f1f1f1]'}) {
                       </span>
                     </div>
 
-                    <div className="invisible absolute z-50 flex w-full flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible max-h-[400px] overflow-y-auto">
+                    <div className="invisible absolute z-50 flex flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible w-auto min-w-[300px] max-h-[400px] overflow-y-auto">
                       {titlesData?.tours && titlesData?.tours.map((item) => (
                         <Link key={item?._id} href={`/tours/${item?._id}`} className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
                         {item?.title}
