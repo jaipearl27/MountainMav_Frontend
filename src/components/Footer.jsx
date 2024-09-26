@@ -10,11 +10,11 @@ const Footer = () => {
     <div className="h-full bg-black">
       <Image alt="" src={FooterLogo} className="w-full bg-black" width={"auto"} height={"auto"} />
 
-      <div className=" bg-[#530030] px-24 py-8 items-center justify-center" >
-        <div className="flex flex-row justify-between items-center">
+      <div className=" bg-[#530030] px-10 md:px-24 py-8 items-center justify-center" >
+        <div className="flex flex-row flex-wrap gap-4 justify-center md:justify-between items-center">
           <Image alt="" src={Logo} className="w-[200px] h-32" width={"auto"} height={"auto"} />
 
-          <div className="flex flex-row gap-6">
+          <div className="flex flex-row flex-wrap gap-6 justify-center md:justify-between">
             <Link href={'/'} className="text-white"> Home </Link>
             <Link href={'/about'} className="text-white"> About </Link>
             <Link href={'/gallery'} className="text-white"> Gallery </Link>
