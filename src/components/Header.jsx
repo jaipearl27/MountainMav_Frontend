@@ -88,7 +88,7 @@ export default function Header({ color = "[#f1f1f1]" }) {
             <Image alt="" src={Logo} className="" width={120} height={90} />
           </Link>
 
-          <div className="xl:hidden flex flex-col justify-center">
+          <div className="lg:hidden flex flex-col justify-center">
             <div
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-md text-white rounded-lg"
               onClick={() => setShowMobDropdown(!showMobDropdown)}
