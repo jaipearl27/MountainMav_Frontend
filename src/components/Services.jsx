@@ -16,11 +16,6 @@ const Services = () => {
           Our Services{" "}
         </h1>
 
-        <p className="flex items-center justify-center mt-8 font-normal text-[19px] text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus
-          tincidunt donec commodo scelerisque quis leo, egestas amet.
-        </p>
-
         <div className="flex flex-row gap-12 items-center justify-center mt-6">
           <Link href={"/tours"} className="flex flex-col gap-12 items-center justify-center">
           
