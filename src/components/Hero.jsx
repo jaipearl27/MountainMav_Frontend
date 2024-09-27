@@ -7,20 +7,19 @@ import Image from "next/image";
 
 const Hero = ({ head1, head2, head3, img1 }) => {
   return (
-    <div className="">
+    <div className="bg-[#aaccdd]">
       <div
-        className="h-screen"
-        style={{ background: `#aaccdd` }}
+        className="h-screen bg-transparent"
       >
-        <Image alt="" src={Circle} className="relative ml-40  w-64 h-64" width={'100%'} height={'auto'} />
-        <Image alt="" src={Birds} className="absolute top-32 left-96"  width={'100%'} height={'auto'}/>
-        <div className="px-20 space-y-4 ">
+        <Image alt="" src={Circle} className="relative ml-20 md:ml-40 w-52 h-52 md:w-64 md:h-64 z-[1]" width={'100%'} height={'auto'} />
+        <Image alt="" src={Birds} className="hidden md:visible absolute top-32 left-96 z-[1]"  width={'100%'} height={'auto'}/>
+        <div className="absolute px-10 md:px-20 space-y-4 z-[3]">
           
-          <h1 className="text-4xl font-black">
+          <h1 className="text-2xl md:text-4xl font-black">
             {" "}
             {head1}
           </h1>
-          <h2 className="text-4xl font-black">
+          <h2 className="text-2xl md:text-4xl font-black">
             {head2}
           </h2>
 
@@ -34,7 +33,7 @@ const Hero = ({ head1, head2, head3, img1 }) => {
         </div>
           <Image alt=""
             src={img1}
-            className="absolute bottom-0 w-screen left-0 right-0 h-[80%]"
+            className="absolute bottom-0 w-screen left-0 right-0 z-[1] "
           />
       </div>
     </div>
