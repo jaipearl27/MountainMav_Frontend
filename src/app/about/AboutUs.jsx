@@ -7,7 +7,7 @@ import trekking from "../../../public/trekking.avif"
 import Image from "next/image";
 
 const AboutUs = () => {
-    return <div className="pt-24 font-sans leading-relaxed tracking-wide flex flex-col max-w-7xl mx-auto">
+    return <div className="pt-24 bg-black font-sans leading-relaxed tracking-wide flex flex-col max-w-7xl mx-auto">
       <main className="flex-grow container mx-auto p-6">
         <section className="text-center mb-12">
           <h2 className="text-4xl text-white font-semibold mb-4">About Us</h2>
