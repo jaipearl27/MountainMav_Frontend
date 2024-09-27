@@ -14,7 +14,7 @@ const About = () => {
 
       <div className="absolute z-10 px-10 md:px-20 py-10 flex flex-col gap-2">
         {/* <h1 className="text-[51px] font-bold"> About </h1> */}
-        <h2 className="text-2xl md:text-4xl font-bold">What's Mountain Mavericks? </h2>
+        <h2 className="text-2xl md:text-4xl font-bold">What&apos;s Mountain Mavericks? </h2>
 
         <div className="w-24 h-2 bg-black mt-6"></div>
 
