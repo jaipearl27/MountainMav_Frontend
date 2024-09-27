@@ -99,7 +99,7 @@ const Gallery = () => {
                         alt={item?.title || "Gallery Image"}
                         height={300}
                         width={400}
-                        className="w-auto max-w-[300px] object-contain cursor-pointer p-2 border-[3px] border-dashed "
+                        className="w-auto max-w-[300px] object-contain cursor-pointer p-2 border-[2px] border-dashed "
                         onClick={() => handleOpen(item)}
 
                       />
