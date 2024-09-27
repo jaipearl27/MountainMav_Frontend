@@ -14,7 +14,6 @@ export default function Header({ color = "[#f1f1f1]" }) {
   const [trekLinks, setTrekLinks] = useState(null);
   const [tourLinks, setTourLinks] = useState(null);
 
-
   useEffect(() => {
     axios
       .get(`${process.env.NEXT_PUBLIC_API_URL}/titles`)
@@ -34,23 +33,22 @@ export default function Header({ color = "[#f1f1f1]" }) {
             });
           });
 
-          setTrekLinks(treklinks)
+        setTrekLinks(treklinks);
 
-
-          const tourlinks = {
-            name: "Tours",
-            path: "/tours",
-            paths: [],
-          };
-          res?.data?.tours &&
-            res?.data?.tours.map((item) => {
-              tourlinks.paths.push({
-                name: item?.title,
-                path: `/tours/${item?._id}`,
-              });
+        const tourlinks = {
+          name: "Tours",
+          path: "/tours",
+          paths: [],
+        };
+        res?.data?.tours &&
+          res?.data?.tours.map((item) => {
+            tourlinks.paths.push({
+              name: item?.title,
+              path: `/tours/${item?._id}`,
             });
-  
-            setTourLinks(tourlinks)
+          });
+
+        setTourLinks(tourlinks);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -113,7 +111,7 @@ export default function Header({ color = "[#f1f1f1]" }) {
             <div
               className={`${
                 showMobDropdown ? "" : "hidden"
-              } absolute top-[102%] right-0 w-[300px] max-w-[300px] max-h-[70vw] overflow-y-auto glass !bg-[#00000070] flex flex-col shadow-[0_2px_2px#121212]`}
+              } absolute top-[102%] right-0 w-[300px] max-w-[300px] max-h-[80vw] overflow-y-auto glass !bg-[#00000070] flex flex-col shadow-[0_2px_2px#121212]`}
             >
               <div>
                 <Link
@@ -149,6 +147,13 @@ export default function Header({ color = "[#f1f1f1]" }) {
                     setShowMobDropdown={setShowMobDropdown}
                   />
                 )}
+                <Link
+                  href={"/contact"}
+                  className="w-full flex justify-end hover:bg-gradient-to-r hover:from-[#2aa012bb] hover:to-[#09ad40] text-[#ffffff] text-base py-2 px-3 hover:text-white transition duration-300 "
+                  onClick={() => setShowMobDropdown(false)}
+                >
+                  <span className="w-[120px] text-right">Contact Us</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -287,6 +292,16 @@ export default function Header({ color = "[#f1f1f1]" }) {
                   </div>
                 </div>
               </div>
+            </li>
+            <li role="none" className="flex">
+              <Link
+                role="menuitem"
+                aria-haspopup="false"
+                className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                href={"/contact"}
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </nav>

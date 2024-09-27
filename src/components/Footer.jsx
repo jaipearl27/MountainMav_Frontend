@@ -11,16 +11,17 @@ const Footer = () => {
       <Image alt="" src={FooterLogo} className="w-full bg-black" width={"auto"} height={"auto"} />
 
       <div className=" bg-[#530030] px-10 md:px-24 py-8 items-center justify-center" >
-        <div className="flex flex-row flex-wrap gap-4 justify-center md:justify-between items-center">
+        <div className="flex flex-row flex-wrap gap-4 justify-center lg:justify-between items-center">
           <Image alt="" src={Logo} className="w-[200px] h-32" width={"auto"} height={"auto"} />
 
           <div className="flex flex-row flex-wrap gap-6 justify-center md:justify-between">
-            <Link href={'/'} className="text-white"> Home </Link>
-            <Link href={'/about'} className="text-white"> About </Link>
-            <Link href={'/gallery'} className="text-white"> Gallery </Link>
-            <Link href={'/tours'} className="text-white"> Religious Tours </Link>
-            <Link href={'/treks'} className="text-white"> Treks </Link>
-            <Link href={'/important-docs'} className="text-white"> Important Documents </Link>
+            <Link href={'/'} className="text-white p-2"> Home </Link>
+            <Link href={'/about'} className="text-white p-2"> About </Link>
+            <Link href={'/gallery'} className="text-white p-2"> Gallery </Link>
+            <Link href={'/tours'} className="text-white p-2"> Religious Tours </Link>
+            <Link href={'/treks'} className="text-white p-2"> Treks </Link>
+            <Link href={'/contact'} className="text-white p-2"> Contact </Link>
+            <Link href={'/important-docs'} className="text-white p-2 bg-green-500 hover:bg-green-600 rounded-md p-2 transition duration-300"> Important Documents </Link>
           </div>
         </div>
 
