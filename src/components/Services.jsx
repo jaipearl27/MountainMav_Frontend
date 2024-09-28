@@ -11,12 +11,12 @@ const Services = () => {
   return (
     <div className="h-full bg-black relative">
       <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="pt-8 text-white font-bold text-[51px] flex items-center justify-center">
+        <h1 className="pt-8 text-white font-bold text-xl md:text-[51px] flex items-center justify-center">
           {" "}
           Our Services{" "}
         </h1>
 
-        <div className="flex flex-row gap-12 items-center justify-center mt-6">
+        <div className="flex flex-row gap-12 flex-wrap items-center justify-center mt-6">
           <Link href={"/tours"} className="flex flex-col gap-12 items-center justify-center">
           
             <Image alt=""

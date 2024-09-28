@@ -11,7 +11,7 @@ const Hero = ({ head1, head2, head3, img1 }) => {
       <div
         className="h-screen bg-transparent"
       >
-        <Image alt="" src={Circle} className="relative ml-20 md:ml-40 w-52 h-52 md:w-64 md:h-64 z-[1]" width={'100%'} height={'auto'} />
+        <Image alt="" src={Circle} className="relative ml-20 md:ml-40 w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 z-[1]" width={'100%'} height={'auto'} />
         <Image alt="" src={Birds} className="hidden md:visible absolute top-32 left-96 z-[1]"  width={'100%'} height={'auto'}/>
         <div className="absolute px-10 md:px-20 space-y-4 z-[3]">
           

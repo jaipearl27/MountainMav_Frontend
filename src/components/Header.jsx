@@ -11,8 +11,10 @@ export default function Header({ color = "[#f1f1f1]" }) {
   const [scrolled, setScrolled] = useState(false);
   const [showMobDropdown, setShowMobDropdown] = useState(false);
   const [titlesData, setTitlesData] = useState(null);
+
   const [trekLinks, setTrekLinks] = useState(null);
   const [tourLinks, setTourLinks] = useState(null);
+  const [specialTripLinks, setSpecialTripLinks] = useState(null);
 
   useEffect(() => {
     axios
@@ -49,6 +51,21 @@ export default function Header({ color = "[#f1f1f1]" }) {
           });
 
         setTourLinks(tourlinks);
+
+        const specialTripLinks = {
+          name: "Special Trips",
+          path: "/specialTrips",
+          paths: [],
+        };
+        res?.data?.specialTrips &&
+          res?.data?.specialTrips.map((item) => {
+            treklinks.paths.push({
+              name: item?.title,
+              path: `/specialTrips/${item?._id}`,
+            });
+          });
+
+        setSpecialTripLinks(specialTripLinks);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -111,7 +128,7 @@ export default function Header({ color = "[#f1f1f1]" }) {
             <div
               className={`${
                 showMobDropdown ? "" : "hidden"
-              } absolute top-[102%] right-0 w-[300px] max-w-[300px] max-h-[80vw] overflow-y-auto glass !bg-[#00000070] flex flex-col shadow-[0_2px_2px#121212]`}
+              } absolute top-[102%] right-0 w-[300px] max-w-[300px] max-h-[500px] overflow-y-auto glass !bg-[#00000070] flex flex-col shadow-[0_2px_2px#121212]`}
             >
               <div>
                 <Link
@@ -135,15 +152,21 @@ export default function Header({ color = "[#f1f1f1]" }) {
                 >
                   <span className="w-[120px] text-right">Gallery</span>
                 </Link>
-                {tourLinks && (
+                {tourLinks && tourLinks?.paths?.length > 0 && (
                   <SubDropdown
                     data={tourLinks}
                     setShowMobDropdown={setShowMobDropdown}
                   />
                 )}
-                {trekLinks && (
+                {trekLinks && trekLinks?.paths?.length > 0 && (
                   <SubDropdown
                     data={trekLinks}
+                    setShowMobDropdown={setShowMobDropdown}
+                  />
+                )}
+                {specialTripLinks && specialTripLinks?.paths?.length > 0 && (
+                  <SubDropdown
+                    data={specialTripLinks}
                     setShowMobDropdown={setShowMobDropdown}
                   />
                 )}
@@ -293,6 +316,57 @@ export default function Header({ color = "[#f1f1f1]" }) {
                 </div>
               </div>
             </li>
+            {titlesData?.specialTrips &&
+              titlesData?.specialTrips?.length > 0 && (
+                <li role="none" className="flex">
+                  <div
+                    role="menuitem"
+                    aria-haspopup="false"
+                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-4"
+                  >
+                    <div className="group relative cursor-pointer py-2">
+                      <div className="flex items-center justify-between">
+                        <Link
+                          href={"/specialTrips"}
+                          className={`menu-hover my-2 py-2 text-base font-semibold text-${color} lg:mx-2 hover:text-emerald-500`}
+                          onClick=""
+                        >
+                          Special Trips
+                        </Link>
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            className="h-6 w-6"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+
+                      <div className="invisible absolute z-50 flex flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible w-auto min-w-[300px] max-h-[400px] overflow-y-auto">
+                        {titlesData?.specialTrips.map((item) => (
+                          <Link
+                            key={item?._id}
+                            href={`/specialTrips/${item?._id}`}
+                            className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2"
+                          >
+                            {item?.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              )}
+
             <li role="none" className="flex">
               <Link
                 role="menuitem"
