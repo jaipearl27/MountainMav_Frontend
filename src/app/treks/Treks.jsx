@@ -10,7 +10,7 @@ export default function Treks() {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/treks`).then(res => {
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/treks?limit=1000`).then(res => {
       setData(res?.data?.data)
     }).catch(err => console.log(err))
   }, [])
