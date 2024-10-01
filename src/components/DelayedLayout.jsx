@@ -1,8 +1,10 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from 'react';
+import CircularProgress from "@mui/material/CircularProgress";
 
-export default function DelayedLayout({ children, delay = 2000 }) {
+import { useEffect, useState } from "react";
+
+export default function DelayedLayout({ children, delay = 10000 }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -14,7 +16,12 @@ export default function DelayedLayout({ children, delay = 2000 }) {
   }, [delay]);
 
   if (isLoading) {
-    return <div>Loading...</div>; // You can customize this loader
+    return (
+      <div className="flex flex-col gap-4 justify-center items-center py-40 text-xl text-white text-center">
+        <span>Loading...</span>
+        <CircularProgress size="3rem" />
+      </div>
+    ); // You can customize this loader
   }
 
   return <>{children}</>; // Render the page content after delay
