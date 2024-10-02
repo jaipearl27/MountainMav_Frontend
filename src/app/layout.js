@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`antialiased`}>
         <Header />
-        <DelayedLayout delay={15000}>{children}</DelayedLayout>
+        <DelayedLayout delay={0}>{children}</DelayedLayout>
         <Footer />
       </body>
     </html>
