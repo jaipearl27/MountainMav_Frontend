@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/Header";
-import DelayedLayout from "@/components/DelayedLayout";
+// import DelayedLayout from "@/components/DelayedLayout";
 
 export const metadata = {
   title: "Mountain Mavericks",
@@ -13,7 +13,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`antialiased`}>
         <Header />
-        <DelayedLayout delay={0}>{children}</DelayedLayout>
+          {children}
+        {/* <DelayedLayout delay={0}>
+
+        </DelayedLayout> */}
         <Footer />
       </body>
     </html>
