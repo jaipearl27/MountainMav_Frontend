@@ -6,13 +6,13 @@ import axios from "axios";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function SpecialTripDetail() {
+export default function SpecialProgramDetail() {
   const { id } = useParams();
   const [data, setData] = useState(null);
 
   useEffect(() => {
     axios
-      .get(`${process.env.NEXT_PUBLIC_API_URL}/specialTrips/${id}`)
+      .get(`${process.env.NEXT_PUBLIC_API_URL}/specialPrograms/${id}`)
       .then((res) => {
         setData(res?.data?.data);
       })

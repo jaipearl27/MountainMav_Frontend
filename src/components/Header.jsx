@@ -14,7 +14,7 @@ export default function Header({ color = "[#f1f1f1]" }) {
 
   const [trekLinks, setTrekLinks] = useState(null);
   const [tourLinks, setTourLinks] = useState(null);
-  const [specialTripLinks, setSpecialTripLinks] = useState(null);
+  const [specialProgramLinks, setSpecialTripLinks] = useState(null);
 
   useEffect(() => {
     axios
@@ -52,20 +52,20 @@ export default function Header({ color = "[#f1f1f1]" }) {
 
         setTourLinks(tourlinks);
 
-        const specialTripLinks = {
+        const specialProgramLinks = {
           name: "Special Trips",
-          path: "/specialTrips",
+          path: "/specialPrograms",
           paths: [],
         };
-        res?.data?.specialTrips &&
-          res?.data?.specialTrips.map((item) => {
+        res?.data?.specialPrograms &&
+          res?.data?.specialPrograms.map((item) => {
             treklinks.paths.push({
               name: item?.title,
-              path: `/specialTrips/${item?._id}`,
+              path: `/specialPrograms/${item?._id}`,
             });
           });
 
-        setSpecialTripLinks(specialTripLinks);
+        setSpecialTripLinks(specialProgramLinks);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -164,9 +164,9 @@ export default function Header({ color = "[#f1f1f1]" }) {
                     setShowMobDropdown={setShowMobDropdown}
                   />
                 )}
-                {specialTripLinks && specialTripLinks?.paths?.length > 0 && (
+                {specialProgramLinks && specialProgramLinks?.paths?.length > 0 && (
                   <SubDropdown
-                    data={specialTripLinks}
+                    data={specialProgramLinks}
                     setShowMobDropdown={setShowMobDropdown}
                   />
                 )}
@@ -316,8 +316,8 @@ export default function Header({ color = "[#f1f1f1]" }) {
                 </div>
               </div>
             </li>
-            {titlesData?.specialTrips &&
-              titlesData?.specialTrips?.length > 0 && (
+            {titlesData?.specialPrograms &&
+              titlesData?.specialPrograms?.length > 0 && (
                 <li role="none" className="flex">
                   <div
                     role="menuitem"
@@ -327,7 +327,7 @@ export default function Header({ color = "[#f1f1f1]" }) {
                     <div className="group relative cursor-pointer py-2">
                       <div className="flex items-center justify-between">
                         <Link
-                          href={"/specialTrips"}
+                          href={"/specialPrograms"}
                           className={`menu-hover my-2 py-2 text-base font-semibold text-${color} lg:mx-2 hover:text-emerald-500`}
                           onClick=""
                         >
@@ -352,10 +352,10 @@ export default function Header({ color = "[#f1f1f1]" }) {
                       </div>
 
                       <div className="invisible absolute z-50 flex flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible w-auto min-w-[300px] max-h-[400px] overflow-y-auto">
-                        {titlesData?.specialTrips.map((item) => (
+                        {titlesData?.specialPrograms.map((item) => (
                           <Link
                             key={item?._id}
-                            href={`/specialTrips/${item?._id}`}
+                            href={`/specialPrograms/${item?._id}`}
                             className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2"
                           >
                             {item?.title}

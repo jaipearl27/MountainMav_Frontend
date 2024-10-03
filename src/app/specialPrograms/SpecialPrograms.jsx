@@ -5,12 +5,12 @@ import Hero2 from "@/components/Hero2";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function SpecialTrips() {
+export default function SpecialPrograms() {
 
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/specialTrips?limit=1000`).then(res => {
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/specialPrograms?limit=1000`).then(res => {
       setData(res?.data?.data)
     }).catch(err => console.log(err))
   }, [])
@@ -20,10 +20,10 @@ export default function SpecialTrips() {
     <div className="bg-black">
         <Hero2/>
         <h1 className="text-5xl text-center py-10 font-semibold text-white">
-            Special Trips
+            Special Programs
         </h1>
         {data && data?.length > 0 ? (
-          <CardsListing data={data} type={"specialTrips"}/>
+          <CardsListing data={data} type={"specialPrograms"}/>
         ) : (
           <div className="w-full text-center text-white">No Data Found</div>
         )}

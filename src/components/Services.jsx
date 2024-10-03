@@ -2,6 +2,8 @@
 
 import Trek from '../../public/trek.png'
 import Religious from "../../public/religious.png"
+import SpecialPrograms from "../../public/specialPrograms.png"
+
 import ServiceFooter from "../../public/servicefooter.png"
 import Link from "next/link";
 import Image from "next/image";
@@ -21,9 +23,9 @@ const Services = () => {
           
             <Image alt=""
               src={Religious}
-              className="rounded-full border-2 border-dashed p-3 hover:scale-110 transition-all duration-300"
-              width={"auto"}
-              height={"auto"}
+              className="rounded-full border-2 max-w-[200px] max-h-[200px] border-dashed p-3 hover:scale-110 transition-all duration-300"
+              width={300}
+              height={300}
             />
         
               <h1 className="text-[#FFD2BF]">Religious Tours</h1>
@@ -34,12 +36,24 @@ const Services = () => {
           
           <Image alt=""
             src={Trek}
-            className="rounded-full border-2 border-dashed p-3 hover:scale-110 transition-all duration-300"
-            width={"auto"}
-            height={"auto"}
+            className="rounded-full border-2 max-w-[200px] max-h-[200px] border-dashed p-3 hover:scale-110 transition-all duration-300"
+            width={300}
+            height={300}
           />
       
             <h1 className="text-[#FFD2BF]">Treks</h1>
+          
+        </Link>
+        <Link href={"/specialPrograms"} className="flex flex-col gap-12 items-center justify-center">
+          
+          <Image alt=""
+            src={SpecialPrograms}
+            className="rounded-full border-2 max-w-[200px] max-h-[200px] border-dashed p-3 hover:scale-110 transition-all duration-300"
+            width={300}
+            height={300}
+          />
+      
+            <h1 className="text-[#FFD2BF]">Special Programs</h1>
           
         </Link>
         </div>
