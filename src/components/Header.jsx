@@ -136,21 +136,21 @@ export default function Header({ color = "[#f1f1f1]" }) {
                   className="w-full flex justify-end hover:bg-gradient-to-r hover:from-[#2aa012bb] hover:to-[#09ad40] text-[#ffffff] text-base py-2 px-3 hover:text-white transition duration-300 "
                   onClick={() => setShowMobDropdown(false)}
                 >
-                  <span className="w-[120px] text-right">Home</span>
+                  <span className="w-[200px] text-right">Home</span>
                 </Link>
                 <Link
                   href={"/about"}
                   className="w-full flex justify-end hover:bg-gradient-to-r hover:from-[#2aa012bb] hover:to-[#09ad40] text-[#ffffff] text-base py-2 px-3 hover:text-white transition duration-300 "
                   onClick={() => setShowMobDropdown(false)}
                 >
-                  <span className="w-[120px] text-right">About</span>
+                  <span className="w-[200px] text-right">About</span>
                 </Link>
                 <Link
                   href={"/gallery"}
                   className="w-full flex justify-end hover:bg-gradient-to-r hover:from-[#2aa012bb] hover:to-[#09ad40] text-[#ffffff] text-base py-2 px-3 hover:text-white transition duration-300 "
                   onClick={() => setShowMobDropdown(false)}
                 >
-                  <span className="w-[120px] text-right">Gallery</span>
+                  <span className="w-[200px] text-right">Gallery</span>
                 </Link>
                 {tourLinks && tourLinks?.paths?.length > 0 && (
                   <SubDropdown
@@ -175,7 +175,7 @@ export default function Header({ color = "[#f1f1f1]" }) {
                   className="w-full flex justify-end hover:bg-gradient-to-r hover:from-[#2aa012bb] hover:to-[#09ad40] text-[#ffffff] text-base py-2 px-3 hover:text-white transition duration-300 "
                   onClick={() => setShowMobDropdown(false)}
                 >
-                  <span className="w-[120px] text-right">Contact Us</span>
+                  <span className="w-[200px] text-right">Contact Us</span>
                 </Link>
               </div>
             </div>

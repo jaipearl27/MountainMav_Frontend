@@ -10,7 +10,7 @@ const SubDropdown = ({ data, setShowMobDropdown }) => {
         className="w-full flex justify-end  py-2 px-3 hover:bg-gradient-to-r hover:from-[#2aa012bb] hover:to-[#09ad40] text-[#ffffff] text-base transition duration-300 cursor-pointer"
         onClick={() => setShowDropdown(!showDropdown)}
       >
-        <span className="w-[120px] flex justify-end gap-1">
+        <span className="w-[200px] flex justify-end gap-1">
           <span className="flex flex-col justify-center">
           <svg
                           xmlns="http://www.w3.org/2000/svg"
