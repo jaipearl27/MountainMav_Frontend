@@ -53,7 +53,7 @@ export default function Header({ color = "[#f1f1f1]" }) {
         setTourLinks(tourlinks);
 
         const specialProgramLinks = {
-          name: "Special Trips",
+          name: "Special Programs",
           path: "/specialPrograms",
           paths: [],
         };
@@ -331,7 +331,7 @@ export default function Header({ color = "[#f1f1f1]" }) {
                           className={`menu-hover my-2 py-2 text-base font-semibold text-${color} lg:mx-2 hover:text-emerald-500`}
                           onClick=""
                         >
-                          Special Trips
+                          Special Programs
                         </Link>
                         <span>
                           <svg
