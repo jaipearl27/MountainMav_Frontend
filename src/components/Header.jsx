@@ -59,7 +59,7 @@ export default function Header({ color = "[#f1f1f1]" }) {
         };
         res?.data?.specialPrograms &&
           res?.data?.specialPrograms.map((item) => {
-            treklinks.paths.push({
+            specialProgramLinks.paths.push({
               name: item?.title,
               path: `/specialPrograms/${item?._id}`,
             });
