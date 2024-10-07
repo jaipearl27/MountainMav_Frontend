@@ -8,13 +8,18 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import { useState } from "react";
 
 import { useForm } from "react-hook-form";
-import { toast } from "sonner";
+import { toast, Toaster } from "sonner";
+import axios from "axios";
+import Image from "next/image";
+
+import uttarakhandTourism from "../../../public/uttarakhandTourism.jpg";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -26,21 +31,31 @@ const Contact = () => {
         data
       );
       setLoading(false);
-      toast.success("Sumbitted...");
-      console.log(response);
+      reset();
+      toast.success("Contact Us Mail Sent Successfully", {
+        style: {
+          color: "white",
+          background: "green",
+        },
+      });
     } catch (error) {
       setLoading(false);
-      console.log(error);
-      toast.error("Server is Busy...");
-      setLoading(false);
+      reset();
+      toast.error("Server not responsing, please try again later", {
+        style: {
+          color: "white",
+          background: "red",
+        },
+      });
     }
   };
 
   return (
     <div className="bg-black">
-      <Hero2 />
+      <Toaster />
+      <Hero2 forBlog={false} />
       <div className="pt-10 bg-black font-sans leading-relaxed tracking-wide flex flex-col max-w-7xl mx-auto">
-        <main className="flex-grow container mx-auto p-6">
+        <main className="flex-grow container mx-auto px-6">
           <section className="text-center mb-12">
             <h2 className="text-4xl text-white font-semibold mb-4">
               Contact Us
@@ -147,6 +162,14 @@ const Contact = () => {
                     </button>
                   )}
                 </form>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 items-center mt-10">
+              <h3 className="text-white ">Recognised by:</h3>
+              <div className="w-full  flex justify-center gap-2 items-center">
+                <Link href="https://uttarakhandtourism.gov.in/">
+                  <Image src={uttarakhandTourism} height={200} width={250} />
+                </Link>
               </div>
             </div>
           </section>

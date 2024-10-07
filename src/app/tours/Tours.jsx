@@ -18,7 +18,8 @@ export default function Tours() {
 
   return (
     <div className="bg-black">
-        <Hero2/>
+      <Hero2 forBlog={false} />
+        
         <h1 className="text-5xl text-center py-10 font-semibold text-white">
             Tours
         </h1>
