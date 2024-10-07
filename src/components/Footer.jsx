@@ -45,8 +45,8 @@ const Footer = () => {
             <Link href={"/treks"} className="text-white p-2">
               Treks
             </Link>
-            <Link href={"/specialTrips"} className="text-white p-2">
-              Special Trips
+            <Link href={"/specialPrograms"} className="text-white p-2">
+              Special Programs
             </Link>
             <Link href={"/contact"} className="text-white p-2">
               Contact
