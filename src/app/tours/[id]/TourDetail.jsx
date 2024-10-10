@@ -19,7 +19,7 @@ export default function TourDetail() {
 
   return (
     <div className="mt-0 bg-black">
-        <Hero2 img={`url(${data?.banner[0].url})`} />
+        <Hero2 img={data?.banner[0].url} />
         <Blog data={data}/>
       {/* <Guides> */}
     </div>

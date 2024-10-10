@@ -1,22 +1,25 @@
 "use client";
-const Hero2 = ({ img = undefined, forBlog=true }) => {
+
+import Image from "next/image";
+
+const Hero2 = ({ img, forBlog = true }) => {
   return (
     <>
-    {forBlog ? (
-      <div
-        className={`h-screen w-full bg-fit bg-center bg-no-repeat`}
-        style={{
-          backgroundImage: `${img ? img : `url('/RELIG.jpg')`}`,
-        }}
-      ></div>
-    ) : (
-      <div
-      className={`!h-[60vh] w-full bg-cover bg-center bg-no-repeat`}
-      style={{
-        backgroundImage: `${img ? img : `url('/RELIG.jpg')`}`,
-      }}
-    ></div>
-    )}
+      {forBlog ? (
+        <Image
+          src={img}
+          className={`w-auto mx-auto mt-32`}
+          height={1080}
+          width={1920}
+        />
+      ) : (
+        <Image
+          src={`${img ? img : `/RELIG.jpg`}`}
+          className={`h-[60vh] w-full object-cover`}
+          height={1080}
+          width={1920}
+        />
+      )}
     </>
   );
 };
