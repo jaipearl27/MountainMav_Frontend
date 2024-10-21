@@ -11,9 +11,9 @@ export default function Home() {
       <div className="mt-0 bg-black">
         <Toaster />
         <Hero
-          head1="EXPLORE"
-          head2="THE MOUNTAIN"
-          head3="Live your dream and explore"
+          head1="Connect people"
+          head2="with the raw beauty of"
+          head3="Nature and Spirituality"
           img1={Mountains}
         />
         <About />

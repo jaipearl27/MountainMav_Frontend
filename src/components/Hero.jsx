@@ -15,21 +15,21 @@ const Hero = ({ head1, head2, head3, img1 }) => {
         <Image alt="" src={Birds} className="hidden md:visible absolute top-32 left-96 z-[1]"  width={'100%'} height={'auto'}/>
         <div className="absolute px-10 md:px-20 space-y-4 z-[3]">
           
-          <h1 className="text-2xl md:text-4xl font-black">
+          <h1 className="text-[27px] md:text-5xl text-black font-bold">
             {" "}
             {head1}
           </h1>
-          <h2 className="text-2xl md:text-4xl font-black">
+          <h2 className="text-[27px] md:text-5xl text-black font-bold">
             {head2}
           </h2>
 
-          <h2 className="font-normal text-[29px] text-gray-600">
+          <h2 className="text-[26px] md:text-5xl text-black font-bold">
             {head3}
           </h2>
 
-          <h3 className="font-medium text-xl"> Explore Now </h3>
+          {/* <h3 className="font-medium text-xl text-green-600"> Explore Now </h3> */}
 
-          <div className="w-28 h-2 bg-black mt-2"></div>
+          <div className="w-36 h-2 bg-green-600 mt-2"></div>
         </div>
           <Image alt=""
             src={img1}
