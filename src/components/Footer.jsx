@@ -7,6 +7,8 @@ import Link from "next/link";
 
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Footer = () => {
   return (
@@ -64,11 +66,23 @@ const Footer = () => {
             <div className="text-white font-semibold flex flex-col justify-center">
               Socials:
             </div>
+
+            <Link href={"https://www.instagram.com/mountainsmavericks/"}>
+              <InstagramIcon sx={{ color: "white" }} />
+            </Link>
+            <Link
+              href={"https://www.facebook.com/profile.php?id=61555810337252"}
+            >
+              <FacebookIcon sx={{ color: "white" }} />
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/mountain-mavericks-985b1a328/"}
+            >
+              <LinkedInIcon sx={{ color: "white" }} />
+            </Link>
+
             <Link href={"https://x.com/SoulMavericks"}>
               <XIcon sx={{ color: "white" }} />
-            </Link>
-            <Link href={"https://www.instagram.com/mountainsmavericks"}>
-              <InstagramIcon sx={{ color: "white" }} />
             </Link>
           </div>
         </div>

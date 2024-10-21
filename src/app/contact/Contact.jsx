@@ -1,10 +1,13 @@
 "use client";
 
-import Hero2 from "@/components/Hero2";
+import Hero2 from "../../components/Hero2";
 import Link from "next/link";
 
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 import { useState } from "react";
 
 import { useForm } from "react-hook-form";
@@ -74,11 +77,28 @@ const Contact = () => {
                   </div>
                   <div className="w-[150px] font-bold text-start">Social:</div>
                   <div className="text-start flex gap-2 flex-wrap">
+                    <Link
+                      href={"https://www.instagram.com/mountainsmavericks/"}
+                    >
+                      <InstagramIcon />
+                    </Link>
+                    <Link
+                      href={
+                        "https://www.facebook.com/profile.php?id=61555810337252"
+                      }
+                    >
+                      <FacebookIcon />
+                    </Link>
+                    <Link
+                      href={
+                        "https://www.linkedin.com/in/mountain-mavericks-985b1a328/"
+                      }
+                    >
+                      <LinkedInIcon />
+                    </Link>
+
                     <Link href={"https://x.com/SoulMavericks"}>
                       <XIcon />
-                    </Link>
-                    <Link href={"https://www.instagram.com/mountainsmavericks"}>
-                      <InstagramIcon />
                     </Link>
                   </div>
                 </div>
