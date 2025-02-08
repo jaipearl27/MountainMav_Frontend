@@ -164,12 +164,13 @@ export default function Header({ color = "[#f1f1f1]" }) {
                     setShowMobDropdown={setShowMobDropdown}
                   />
                 )}
-                {specialProgramLinks && specialProgramLinks?.paths?.length > 0 && (
-                  <SubDropdown
-                    data={specialProgramLinks}
-                    setShowMobDropdown={setShowMobDropdown}
-                  />
-                )}
+                {specialProgramLinks &&
+                  specialProgramLinks?.paths?.length > 0 && (
+                    <SubDropdown
+                      data={specialProgramLinks}
+                      setShowMobDropdown={setShowMobDropdown}
+                    />
+                  )}
                 <Link
                   href={"/contact"}
                   className="w-full flex justify-end hover:bg-gradient-to-r hover:from-[#2aa012bb] hover:to-[#09ad40] text-[#ffffff] text-base py-2 px-3 hover:text-white transition duration-300 "
