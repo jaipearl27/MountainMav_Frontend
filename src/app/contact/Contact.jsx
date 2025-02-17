@@ -16,6 +16,7 @@ import axios from "axios";
 import Image from "next/image";
 
 import uttarakhandTourism from "../../../public/uttarakhandTourism.jpg";
+import nidhiPledge from "../../../public/nidhiPledge.jpeg";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -186,9 +187,12 @@ const Contact = () => {
             </div>
             <div className="flex flex-col gap-4 items-center mt-10">
               <h3 className="text-white ">Recognised by:</h3>
-              <div className="w-full  flex justify-center gap-2 items-center">
+              <div className="w-full  flex flex-wrap justify-center gap-2 items-center">
                 <Link href="https://uttarakhandtourism.gov.in/">
                   <Image src={uttarakhandTourism} height={200} width={250} />
+                </Link>
+                <Link href={`/nidhiPledge.jpeg`} target="_blank">
+                  <Image src={nidhiPledge} height={200} width={250} />
                 </Link>
               </div>
             </div>

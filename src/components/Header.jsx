@@ -84,9 +84,7 @@ export default function Header({ color = "[#f1f1f1]" }) {
   return (
     <>
       <header
-        className={`fixed left-1/2 -translate-x-1/2 top-2 px-4 py-1 z-20 w-full md:w-[80vw] glass ${
-          scrolled ? "text-white" : "text-black"
-        }`}
+        className={`fixed left-1/2 -translate-x-1/2 top-2 px-4 py-1 z-20 w-full md:w-[80vw] glass text-black`}
       >
         <nav
           aria-label="main navigation"
@@ -126,9 +124,8 @@ export default function Header({ color = "[#f1f1f1]" }) {
               </svg>
             </div>
             <div
-              className={`${
-                showMobDropdown ? "" : "hidden"
-              } absolute top-[102%] right-0 w-[300px] max-w-[300px] max-h-[500px] overflow-y-auto glass !bg-[#00000070] flex flex-col shadow-[0_2px_2px#121212]`}
+              className={`${showMobDropdown ? "" : "hidden"
+                } absolute top-[102%] right-0 w-[300px] max-w-[300px] max-h-[500px] overflow-y-auto glass !bg-[#00000070] flex flex-col shadow-[0_2px_2px#121212]`}
             >
               <div>
                 <Link
