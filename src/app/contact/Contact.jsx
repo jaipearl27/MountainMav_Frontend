@@ -17,6 +17,7 @@ import Image from "next/image";
 
 import uttarakhandTourism from "../../../public/uttarakhandTourism.jpg";
 import nidhiPledge from "../../../public/nidhiPledge.jpeg";
+import certificate2 from "../../../public/certificate2.jpg";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -193,6 +194,9 @@ const Contact = () => {
                 </Link>
                 <Link href={`/nidhiPledge.jpeg`} target="_blank">
                   <Image src={nidhiPledge} height={200} width={250} />
+                </Link>
+                <Link href={`/certificate2.jpg`} target="_blank">
+                  <Image src={certificate2} height={200} width={250} />
                 </Link>
               </div>
             </div>
