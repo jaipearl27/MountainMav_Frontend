@@ -5,7 +5,7 @@ import Hero2 from "@/components/Hero2";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function Treks() {
+export default function Treks({homepage = false}) {
   console.log(process.env.NEXT_PUBLIC_API_URL);
   const [data, setData] = useState(null);
 
@@ -20,8 +20,7 @@ export default function Treks() {
 
   return (
     <div className=" bg-black">
-      <Hero2 forBlog={false} />
-
+      {!homepage && <Hero2 forBlog={false} />}
       <h1 className="text-5xl text-center py-10 font-semibold text-white">
         Treks
       </h1>

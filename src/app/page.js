@@ -2,6 +2,8 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Mountains from "../../public/mountains.png";
+import Tours from "@/app/tours/Tours"
+import Treks from "@/app/treks/Treks"
 import { Toaster } from "sonner";
 
 
@@ -18,7 +20,11 @@ export default function Home() {
         />
         <About />
 
+        <Tours homepage={true} />
+        <Treks homepage={true} />
+
         <Services />
+        
         {/* <Guides> */}
       </div>
    

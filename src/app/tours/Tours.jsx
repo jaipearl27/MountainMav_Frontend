@@ -5,7 +5,7 @@ import Hero2 from "@/components/Hero2";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function Tours() {
+export default function Tours({homepage=false}) {
 
   const [data, setData] = useState(null)
 
@@ -18,10 +18,10 @@ export default function Tours() {
 
   return (
     <div className="bg-black">
-      <Hero2 forBlog={false} />
+      {!homepage && <Hero2 forBlog={false} />}
         
         <h1 className="text-5xl text-center py-10 font-semibold text-white">
-            Tours
+            Religious Tours
         </h1>
         <CardsListing data={data} type={"tours"}/>
       {/* <Guides> */}
